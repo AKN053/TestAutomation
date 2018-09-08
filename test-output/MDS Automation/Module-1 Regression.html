@@ -1,0 +1,480 @@
+<html>
+<head>
+<title>TestNG:  Module-1 Regression</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Module-1 Regression</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>41/4/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Oct 21 11:17:55 IST 2015</td>
+</tr>
+<tr><td>Total time:</td><td>4181 seconds (4181400 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCases.module1.Admin.industrySegmentFilterDistributor()'><b>industrySegmentFilterDistributor</b><br>Test class: testCases.module1.Admin</td>
+<td><div><pre>java.lang.AssertionError: Failing Test Case
+	at framework.helpers.VerifyAsserts.verifyTrue(VerifyAsserts.java:28)
+	at testCases.module1.Admin.industrySegmentFilterDistributor(Admin.java:437)
+Caused by: java.lang.AssertionError: expected [true] but found [false]
+	at framework.helpers.VerifyAsserts.verifyTrue(VerifyAsserts.java:20)
+	... 25 more
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace4680726", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace4680726'><pre>java.lang.AssertionError: Failing Test Case
+	at org.testng.Assert.fail(Assert.java:83)
+	at framework.helpers.VerifyAsserts.verifyTrue(VerifyAsserts.java:28)
+	at testCases.module1.Admin.industrySegmentFilterDistributor(Admin.java:437)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at framework.helpers.VerifyAsserts.verifyTrue(VerifyAsserts.java:20)
+	... 25 more
+</pre></div></td>
+<td>52</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Catalog.searchGTIN()'><b>searchGTIN</b><br>Test class: testCases.module1.Catalog</td>
+<td><div><pre>java.lang.AssertionError: Failing Test Case
+	at framework.helpers.VerifyAsserts.verifyTrue(VerifyAsserts.java:28)
+	at testCases.module1.Catalog.searchGTIN(Catalog.java:29)
+Caused by: java.lang.AssertionError: expected [true] but found [false]
+	at framework.helpers.VerifyAsserts.verifyTrue(VerifyAsserts.java:20)
+	... 25 more
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace23798254", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace23798254'><pre>java.lang.AssertionError: Failing Test Case
+	at org.testng.Assert.fail(Assert.java:83)
+	at framework.helpers.VerifyAsserts.verifyTrue(VerifyAsserts.java:28)
+	at testCases.module1.Catalog.searchGTIN(Catalog.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at framework.helpers.VerifyAsserts.verifyTrue(VerifyAsserts.java:20)
+	... 25 more
+</pre></div></td>
+<td>51</td>
+<td>testCases.module1.Catalog@1c8e616</td></tr>
+<tr>
+<td title='testCases.module1.Catalog.searchProductCode()'><b>searchProductCode</b><br>Test class: testCases.module1.Catalog</td>
+<td><div><pre>java.lang.AssertionError: Failing Test Case
+	at framework.helpers.VerifyAsserts.verifyTrue(VerifyAsserts.java:28)
+	at testCases.module1.Catalog.searchProductCode(Catalog.java:38)
+Caused by: java.lang.AssertionError: expected [true] but found [false]
+	at framework.helpers.VerifyAsserts.verifyTrue(VerifyAsserts.java:20)
+	... 25 more
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace196073", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace196073'><pre>java.lang.AssertionError: Failing Test Case
+	at org.testng.Assert.fail(Assert.java:83)
+	at framework.helpers.VerifyAsserts.verifyTrue(VerifyAsserts.java:28)
+	at testCases.module1.Catalog.searchProductCode(Catalog.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at framework.helpers.VerifyAsserts.verifyTrue(VerifyAsserts.java:20)
+	... 25 more
+</pre></div></td>
+<td>54</td>
+<td>testCases.module1.Catalog@1c8e616</td></tr>
+<tr>
+<td title='testCases.module1.Catalog.searchProductDescription()'><b>searchProductDescription</b><br>Test class: testCases.module1.Catalog</td>
+<td><div><pre>java.lang.AssertionError: Failing Test Case
+	at framework.helpers.VerifyAsserts.verifyTrue(VerifyAsserts.java:28)
+	at testCases.module1.Catalog.searchProductDescription(Catalog.java:47)
+Caused by: java.lang.AssertionError: expected [true] but found [false]
+	at framework.helpers.VerifyAsserts.verifyTrue(VerifyAsserts.java:20)
+	... 25 more
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace21148052", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace21148052'><pre>java.lang.AssertionError: Failing Test Case
+	at org.testng.Assert.fail(Assert.java:83)
+	at framework.helpers.VerifyAsserts.verifyTrue(VerifyAsserts.java:28)
+	at testCases.module1.Catalog.searchProductDescription(Catalog.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at framework.helpers.VerifyAsserts.verifyTrue(VerifyAsserts.java:20)
+	... 25 more
+</pre></div></td>
+<td>59</td>
+<td>testCases.module1.Catalog@1c8e616</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCases.module1.Admin.AddCompanyWithMultipleGLNs()'><b>AddCompanyWithMultipleGLNs</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>109</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Catalog.FixFailedCancelLink()'><b>FixFailedCancelLink</b><br>Test class: testCases.module1.Catalog</td>
+<td></td>
+<td>57</td>
+<td>testCases.module1.Catalog@1c8e616</td></tr>
+<tr>
+<td title='testCases.module1.Catalog.FixFailedGTINDetailsGDSNOMS()'><b>FixFailedGTINDetailsGDSNOMS</b><br>Test class: testCases.module1.Catalog</td>
+<td></td>
+<td>53</td>
+<td>testCases.module1.Catalog@1c8e616</td></tr>
+<tr>
+<td title='testCases.module1.Catalog.GTINDetailsGDSN()'><b>GTINDetailsGDSN</b><br>Test class: testCases.module1.Catalog</td>
+<td></td>
+<td>86</td>
+<td>testCases.module1.Catalog@1c8e616</td></tr>
+<tr>
+<td title='testCases.module1.Catalog.GTINDetailsGDSNOMS()'><b>GTINDetailsGDSNOMS</b><br>Test class: testCases.module1.Catalog</td>
+<td></td>
+<td>77</td>
+<td>testCases.module1.Catalog@1c8e616</td></tr>
+<tr>
+<td title='testCases.module1.Catalog.GTINDetailsOMS()'><b>GTINDetailsOMS</b><br>Test class: testCases.module1.Catalog</td>
+<td></td>
+<td>79</td>
+<td>testCases.module1.Catalog@1c8e616</td></tr>
+<tr>
+<td title='testCases.module1.Catalog.RegistrationStatusfilterFailed()'><b>RegistrationStatusfilterFailed</b><br>Test class: testCases.module1.Catalog</td>
+<td></td>
+<td>57</td>
+<td>testCases.module1.Catalog@1c8e616</td></tr>
+<tr>
+<td title='testCases.module1.Catalog.RegistrationStatusfilterNotReady()'><b>RegistrationStatusfilterNotReady</b><br>Test class: testCases.module1.Catalog</td>
+<td></td>
+<td>84</td>
+<td>testCases.module1.Catalog@1c8e616</td></tr>
+<tr>
+<td title='testCases.module1.Catalog.RegistrationStatusfilterProcessing()'><b>RegistrationStatusfilterProcessing</b><br>Test class: testCases.module1.Catalog</td>
+<td></td>
+<td>51</td>
+<td>testCases.module1.Catalog@1c8e616</td></tr>
+<tr>
+<td title='testCases.module1.Catalog.RegistrationStatusfilterValidated()'><b>RegistrationStatusfilterValidated</b><br>Test class: testCases.module1.Catalog</td>
+<td></td>
+<td>47</td>
+<td>testCases.module1.Catalog@1c8e616</td></tr>
+<tr>
+<td title='testCases.module1.Admin.SaveEditViewCompanyEntrustmentsWizard()'><b>SaveEditViewCompanyEntrustmentsWizard</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>172</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Admin.SaveEditViewCompanyInformationWizard()'><b>SaveEditViewCompanyInformationWizard</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>150</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Admin.SaveEditViewCompanyIntegrationAndApplicationWizard()'><b>SaveEditViewCompanyIntegrationAndApplicationWizard</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>151</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Admin.SaveEditViewCompanyRoleWizard()'><b>SaveEditViewCompanyRoleWizard</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>141</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Admin.SaveEditViewCompanyUserAccountsWizard()'><b>SaveEditViewCompanyUserAccountsWizard</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>226</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Admin.activeCompany()'><b>activeCompany</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>247</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Admin.cancelCompanyInformation()'><b>cancelCompanyInformation</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>60</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Admin.cancelCompanyRole()'><b>cancelCompanyRole</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>84</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Admin.cancelEntrusments()'><b>cancelEntrusments</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>101</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Admin.cancelIntegration()'><b>cancelIntegration</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>102</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Admin.cancelUserAccounts()'><b>cancelUserAccounts</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>101</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Admin.changeCompanyStatus()'><b>changeCompanyStatus</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>255</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Catalog.downloadSelectedButtonClickable()'><b>downloadSelectedButtonClickable</b><br>Test class: testCases.module1.Catalog</td>
+<td></td>
+<td>39</td>
+<td>testCases.module1.Catalog@1c8e616</td></tr>
+<tr>
+<td title='testCases.module1.Catalog.getProductSheetButton()'><b>getProductSheetButton</b><br>Test class: testCases.module1.Catalog</td>
+<td></td>
+<td>47</td>
+<td>testCases.module1.Catalog@1c8e616</td></tr>
+<tr>
+<td title='testCases.module1.Admin.industrySegmentFilterManufacturer()'><b>industrySegmentFilterManufacturer</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>46</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Admin.industrySegmentFilterOperator()'><b>industrySegmentFilterOperator</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>48</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Admin.industrySegmentFilterProduceSupplier()'><b>industrySegmentFilterProduceSupplier</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>72</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Admin.industrySegmentFilterReDistributor()'><b>industrySegmentFilterReDistributor</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>48</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Admin.industrySegmentFilterSupplier()'><b>industrySegmentFilterSupplier</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>49</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Logins.invalidLogin()'><b>invalidLogin</b><br>Test class: testCases.module1.Logins</td>
+<td></td>
+<td>21</td>
+<td>testCases.module1.Logins@dbe50f</td></tr>
+<tr>
+<td title='testCases.module1.PublishingCenter.mandatorySelectionOnPublishItems()'><b>mandatorySelectionOnPublishItems</b><br>Test class: testCases.module1.PublishingCenter</td>
+<td></td>
+<td>32</td>
+<td>testCases.module1.PublishingCenter@17246de</td></tr>
+<tr>
+<td title='testCases.module1.Admin.nextButtonAddNewCompany()'><b>nextButtonAddNewCompany</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>236</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.Admin.previousButtonAddNewCompany()'><b>previousButtonAddNewCompany</b><br>Test class: testCases.module1.Admin</td>
+<td></td>
+<td>432</td>
+<td>testCases.module1.Admin@66d33a</td></tr>
+<tr>
+<td title='testCases.module1.PublishingCenter.publishItemsThroughSubscriber()'><b>publishItemsThroughSubscriber</b><br>Test class: testCases.module1.PublishingCenter</td>
+<td></td>
+<td>37</td>
+<td>testCases.module1.PublishingCenter@17246de</td></tr>
+<tr>
+<td title='testCases.module1.PublishingCenter.publishingItemSuccessfully()'><b>publishingItemSuccessfully</b><br>Test class: testCases.module1.PublishingCenter</td>
+<td></td>
+<td>60</td>
+<td>testCases.module1.PublishingCenter@17246de</td></tr>
+<tr>
+<td title='testCases.module1.PublishingCenter.returnToPublishingCenter()'><b>returnToPublishingCenter</b><br>Test class: testCases.module1.PublishingCenter</td>
+<td></td>
+<td>23</td>
+<td>testCases.module1.PublishingCenter@17246de</td></tr>
+<tr>
+<td title='testCases.module1.PublishingCenter.reviewCICs()'><b>reviewCICs</b><br>Test class: testCases.module1.PublishingCenter</td>
+<td></td>
+<td>28</td>
+<td>testCases.module1.PublishingCenter@17246de</td></tr>
+<tr>
+<td title='testCases.module1.PublishingCenter.subscribersItemSplitHeader()'><b>subscribersItemSplitHeader</b><br>Test class: testCases.module1.PublishingCenter</td>
+<td></td>
+<td>56</td>
+<td>testCases.module1.PublishingCenter@17246de</td></tr>
+<tr>
+<td title='testCases.module1.Catalog.uploadAndRegisterCatalog()'><b>uploadAndRegisterCatalog</b><br>Test class: testCases.module1.Catalog</td>
+<td></td>
+<td>43</td>
+<td>testCases.module1.Catalog@1c8e616</td></tr>
+<tr>
+<td title='testCases.module1.Logins.validLogin()'><b>validLogin</b><br>Test class: testCases.module1.Logins</td>
+<td></td>
+<td>20</td>
+<td>testCases.module1.Logins@dbe50f</td></tr>
+<tr>
+<td title='testCases.module1.PublishingCenter.verifyAvailableColumns()'><b>verifyAvailableColumns</b><br>Test class: testCases.module1.PublishingCenter</td>
+<td></td>
+<td>35</td>
+<td>testCases.module1.PublishingCenter@17246de</td></tr>
+</table><p>
+</body>
+</html>

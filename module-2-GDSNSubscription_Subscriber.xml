@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MDS Automation">
+
+	<listeners>
+    	<listener class-name="framework.helpers.TestsListenerAdapter" />
+    	<listener class-name="framework.providers.WebDriverListener" />
+	</listeners>
+
+<test name="Module-2 GDSNSubscription_Subscriber">
+	<classes>
+		<class name="testCases.module2.GDSNSubscription_Subscriber"></class>				
+	</classes>
+	
+</test>
+</suite>	
