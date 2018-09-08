@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MDS Automation]">
+  <listeners>
+    <listener class-name="framework.helpers.TestsListenerAdapter"/>
+  </listeners>
+  <test name="Module-1 Regression(failed)">
+    <classes>
+      <class name="testCases.module1.Catalog">
+        <methods>
+          <include name="searchGTIN"/>
+          <include name="searchProductCode"/>
+          <include name="searchProductDescription"/>
+        </methods>
+      </class> <!-- testCases.module1.Catalog -->
+      <class name="testCases.module1.Admin">
+        <methods>
+          <include name="industrySegmentFilterDistributor"/>
+        </methods>
+      </class> <!-- testCases.module1.Admin -->
+    </classes>
+  </test> <!-- Module-1 Regression(failed) -->
+</suite> <!-- Failed suite [MDS Automation] -->
